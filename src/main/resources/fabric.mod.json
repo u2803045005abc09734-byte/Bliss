@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "id": "blissgemsfabric",
+  "version": "${version}",
+  "name": "BlissGems Fabric Port",
+  "description": "An independent early Fabric reimplementation of core BlissGems-style gem abilities for Minecraft 26.3.",
+  "authors": ["OpenAI"],
+  "environment": "*",
+  "entrypoints": {
+    "main": ["dev.blissgems.fabric.BlissGemsFabric"]
+  },
+  "depends": {
+    "fabricloader": ">=0.19.5",
+    "minecraft": "~26.3",
+    "java": ">=25",
+    "fabric-api": "*"
+  }
+}
