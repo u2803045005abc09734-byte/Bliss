@@ -32,7 +32,7 @@ jobs:
           gradle-version: "9.7.1"
 
       - name: Build mod JAR
-        run: gradle --no-daemon clean build
+        run: gradle --no-daemon --no-configuration-cache clean build
 
       - name: Upload build artifact
         uses: actions/upload-artifact@v4
@@ -44,7 +44,7 @@ jobs:
           if-no-files-found: error
           retention-days: 14
 
-      - name: Attach JAR to GitHub Release for version tags
+      - name: Attach JAR to GitHub Release
         if: startsWith(github.ref, 'refs/tags/v')
         uses: softprops/action-gh-release@v2
         with:
